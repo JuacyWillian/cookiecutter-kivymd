@@ -4,10 +4,14 @@
     "github_username": "hackebrot",
     "project_name": "Kivy Project",
     "repo_name": "{{cookiecutter.project_name|lower|replace(' ', '')}}",
-    "project_short_description": "Cookiecutter template for applications built upon the kivy-framework.",
+    "project_short_description": "Cookiecutter template for applications built upon the kivy-framework and kivymd.",
     "release_date": "2014-05-15",
     "year": "2014",
     "version": "0.1.0",
     "minimum_kivy_version": "1.8.0",
-    "orientation": ["all", "landscape", "portrait"]
+    "orientation": [
+        "all",
+        "landscape",
+        "portrait"
+    ]
 }

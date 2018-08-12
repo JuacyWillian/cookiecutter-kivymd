@@ -1,5 +1,31 @@
 #:kivy {{cookiecutter.minimum_kivy_version}}
 
-Button:
-    text: 'Hello World'
+#:import NavigationLayout kivymd.navigationdrawer
+#:import MDNavigationDrawer kivymd.navigationdrawer
+#:import MDNavigationDrawerIconButton kivymd.navigationdrawer
+#:import MDNavigationDrawerToolbar kivymd.navigationdrawer
+#:import Toolbar kivymd.toolbar
 
+NavigationLayout:
+    id nav_layout
+    MDNavigationDrawer:
+        id: drawer
+        MDNavigationDrawerToolbar:
+            title: app.get_application_name()
+        MDNavigationIconButton:
+            icon: 'home'
+            text: 'Home'
+            on_release: manager.current = 'home'
+
+    BoxLayout:
+        orientation: 'vertical'
+        Toolbar:
+            id: toolbar
+            title: app.get_application_name()
+            left_action_items: [['menu', lambda: nav_layout.drawer_toggle()]]
+        Screen:
+            name: 'home'
+            MDLabel:
+                text: 'Wellcome to Kivy'
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                font_style: 'Display1'

@@ -1,0 +1,2 @@
+kivy={{minimum_kivy_version}}
+git+https://gitlab.com/kivymd/KivyMD.git
