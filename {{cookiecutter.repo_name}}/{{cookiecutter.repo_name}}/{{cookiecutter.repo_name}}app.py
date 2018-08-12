@@ -2,10 +2,10 @@ from kivy.app import App
 from kivymd.theming import ThemeManager
 
 
-class KivymdbasicApp(App):
+class {{cookiecutter.repo_name | capitalize}}App(App):
     """Basic kivy app
 
-    Edit kivymdbasic.kv to get started.
+    Edit {{cookiecutter.repo_name}}.kv to get started.
     """
     theme_cls = ThemeManager()
     theme_cls.primary_palete = 'Teal'
