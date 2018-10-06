@@ -8,7 +8,7 @@ class {{cookiecutter.repo_name | capitalize}}App(App):
     Edit {{cookiecutter.repo_name}}.kv to get started.
     """
     theme_cls = ThemeManager()
-    theme_cls.primary_palete = 'Teal'
+    theme_cls.primary_palette = 'DeepPurple'
 
     def build(self):
         return self.root
