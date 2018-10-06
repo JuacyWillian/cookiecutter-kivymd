@@ -1,2 +1,3 @@
+cython==0.28.2
 kivy={{cookiecutter.minimum_kivy_version}}
-git+https://gitlab.com/kivymd/KivyMD.git
+git+https://github.com/HeaTTheatR/KivyMD.git
