@@ -16,7 +16,7 @@ class Test{{cookiecutter.repo_name | capitalize}}App(unittest.TestCase):
         self.app.run()
 
     def test_name(self):
-        self.assertEqual(self.app.name, '{{cookiecutter.repo_name}}')
+        self.assertEqual(self.app.get_application_name(), '{{ cookiecutter.project_name }}')
 
     def tearDown(self):
         pass
