@@ -9,6 +9,7 @@ class {{cookiecutter.repo_name | capitalize}}App(App):
     """
     theme_cls = ThemeManager()
     theme_cls.primary_palette = 'DeepPurple'
+    title = {{ cookiecutter.project_name }}
 
     def build(self):
         return self.root
