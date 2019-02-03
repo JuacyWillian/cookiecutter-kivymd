@@ -3,7 +3,7 @@
 
 import unittest
 from kivy.clock import Clock
-from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}}app import {{cookiecutter.repo_name | capitalize}}App
+from {{cookiecutter.repo_name}} import {{cookiecutter.repo_name | capitalize}}App
 
 
 class Test{{cookiecutter.repo_name | capitalize}}App(unittest.TestCase):

@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = {{cookiecutter.project_name}}
+title = My Application
 
 # (str) Package name
-package.name = {{cookiecutter.repo_name}}
+package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = {{cookiecutter.project_domain}}
+package.domain = org.test
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -28,15 +28,15 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = {{cookiecutter.version}}
+version = 0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
-version.filename = %(source.dir)s/main.py
+# version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = kivy>={{cookiecutter.minimum_kivy_version}},git+https://github.com/HeaTTheatR/KivyMD.git,sqlite3
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -46,13 +46,13 @@ requirements = kivy>={{cookiecutter.minimum_kivy_version}},git+https://github.co
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/presplash.png
+#presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/icon.png
+#icon.filename = %(source.dir)s/data/icon.png
 
-# (str) Supported orientation (one of landscape, portrait or all)
-orientation = {{cookiecutter.orientation}}
+# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+orientation = portrait
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -68,7 +68,7 @@ orientation = {{cookiecutter.orientation}}
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = {{cookiecutter.minimum_kivy_version}}
+osx.kivy_version = 1.9.1
 
 #
 # Android specific
@@ -87,26 +87,29 @@ fullscreen = 0
 # (list) Permissions
 #android.permissions = INTERNET
 
-# (int) Android API to use
-#android.api = 19
+# (int) Target Android API, should be as high as possible.
+#android.api = 27
 
-# (int) Minimum API required
-#android.minapi = 9
+# (int) Minimum API your APK will support.
+#android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
 
 # (str) Android NDK version to use
-#android.ndk = 9c
+#android.ndk = 17c
+
+# (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
+#android.ndk_api = 21
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = ~/android/ndk
+#android.ndk_path =
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
-#android.sdk_path = ~/android/sdk
+#android.sdk_path =
 
 # (str) ANT directory (if empty, it will be automatically downloaded.)
 #android.ant_path =
@@ -115,6 +118,12 @@ android.ndk_path = ~/android/ndk
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
 # android.skip_update = False
+
+# (bool) If True, then automatically accept SDK license
+# agreements. This is intended for automation only. If set to False,
+# the default, you will be shown the license when first running
+# buildozer.
+# android.accept_sdk_license = False
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.renpy.android.PythonActivity
@@ -132,7 +141,7 @@ android.ndk_path = ~/android/ndk
 # their classes. Don't add jars that you do not need, since extra jars can slow
 # down the build process. Allows wildcards matching, for example:
 # OUYA-ODK/libs/*.jar
-#android.add_jars = libs/*.jar
+#android.add_jars = foo.jar,bar.jar,path/to/more/*.jar
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
@@ -149,8 +158,8 @@ android.ndk_path = ~/android/ndk
 # (list) Java classes to add as activities to the manifest.
 #android.add_activites = com.example.ExampleActivity
 
-# (str) python-for-android branch to use, defaults to stable
-#p4a.branch = stable
+# (str) python-for-android branch to use, defaults to master
+#p4a.branch = master
 
 # (str) OUYA Console category. Should be one of GAME or APP
 # If you leave this blank, OUYA support will not be enabled
@@ -217,6 +226,16 @@ android.arch = armeabi-v7a
 
 # (str) Path to a custom kivy-ios folder
 #ios.kivy_ios_dir = ../kivy-ios
+# Alternately, specify the URL and branch of a git checkout:
+ios.kivy_ios_url = https://github.com/kivy/kivy-ios
+ios.kivy_ios_branch = master
+
+# Another platform dependency: ios-deploy
+# Uncomment to use a custom checkout
+#ios.ios_deploy_dir = ../ios_deploy
+# Or specify URL and branch
+ios.ios_deploy_url = https://github.com/phonegap/ios-deploy
+ios.ios_deploy_branch = 1.7.0
 
 # (str) Name of the certificate to use for signing the debug version
 # Get a list of available identities: buildozer ios list_identities
@@ -229,7 +248,7 @@ android.arch = armeabi-v7a
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+log_level = 1
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1

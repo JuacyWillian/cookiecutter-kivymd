@@ -1,3 +1,4 @@
 cython==0.28.2
 kivy=={{cookiecutter.minimum_kivy_version}}
 git+https://github.com/HeaTTheatR/KivyMD.git
+invoke
