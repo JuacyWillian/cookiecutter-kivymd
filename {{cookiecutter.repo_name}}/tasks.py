@@ -17,10 +17,10 @@ def unittest(c):
 
 
 @task
-def docker_build(c)
+def docker_build(c):
     c.run('docker build --tag=buildozer .')
 
 
 @task
-def docker_run(c)
+def docker_run(c):
     c.run('docker run --volume "$(pwd)":/home/user/hostcwd buildozer --version')

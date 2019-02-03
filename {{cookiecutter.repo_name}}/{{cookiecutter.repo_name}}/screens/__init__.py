@@ -2,10 +2,10 @@ from enum import Enum
 
 from .homescreen import HomeScreen
 
-class SCREENS(Enum):
+class SCREEN_TYPE(Enum):
     HOME = 1
 
 
-screen_type = {
-    SCREENS.HOME: HomeScreen,
+SCREENS = {
+    SCREEN_TYPE.HOME: HomeScreen,
 }
