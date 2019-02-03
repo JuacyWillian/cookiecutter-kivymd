@@ -10,11 +10,11 @@ Builder.load_string("""
 <HomeScreen>:
     ScrollView:
         do_scroll_x: False
-        MDList:
-            id: sell_list
-    
-    MDRaisedButton:
-        text: 'Hello World KivyMD'
+
+        FloatLayout:
+            MDRaisedButton:
+                text: 'Hello World KivyMD'
+                pos_hint: {'center_x': .5, 'center_y': .5}
     
 """)
 

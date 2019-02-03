@@ -1,7 +1,9 @@
 from kivy.app import App
+from kivy.properties import ObjectProperty
+
 from kivymd.theming import ThemeManager
 
-from .screens import *
+from .screens import SCREENS, SCREEN_TYPE
 
 
 class {{cookiecutter.repo_name | capitalize}}App(App):
