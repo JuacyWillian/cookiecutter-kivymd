@@ -58,8 +58,6 @@ Issues
 Report bugs at https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/issues.
 
 
-.. _`Kivy Launcher`: http://kivy.org/docs/guide/packaging-android.html#packaging-your-application-for-the-kivy-launcher
 .. _`Kivy`: https://github.com/kivy/kivy
-.. _`MIT License`: http://opensource.org/licenses/MIT
-.. _`nose`: https://github.com/nose-devs/nose/
-.. _`py.test`: http://pytest.org/latest/
+.. _`KivyMD`: https://github.com/HeaTTheatR/KivyMD
+.. _`Cookiecutter-KivyMD`: https://github.com/juacywillian/cookiecutter-kivymd
