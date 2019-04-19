@@ -12,8 +12,8 @@ def landscape(c):
 
 
 @task
-def unittest(c):
-    c.run('python -m unittest')
+def run_test(c):
+    c.run('pytest -v')
 
 
 @task

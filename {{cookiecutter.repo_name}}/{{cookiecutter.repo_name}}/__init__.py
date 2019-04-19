@@ -6,10 +6,10 @@ from kivymd.theming import ThemeManager
 from .screens import SCREENS, SCREEN_TYPE
 
 
-class {{cookiecutter.repo_name | capitalize}}App(App):
+class {{cookiecutter.main_class_name}}App(App):
     """Basic kivy app
 
-    Edit {{cookiecutter.repo_name}}.kv to get started.
+    Edit {{cookiecutter.main_class_name}}.kv to get started.
     """
     theme_cls = ThemeManager()
     theme_cls.primary_palette = 'DeepPurple'
